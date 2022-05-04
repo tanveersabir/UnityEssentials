@@ -28,6 +28,17 @@ public class Test_TryGetComponent : MonoBehaviour
         {
             Debug.Log("Collider is not attached !");
         }
+
+        //This code section demonstrate how to get script using TryGetComponent
+        //In this case we are furhter not using test_Player, so we can also use "_" instead of "test_Player"
+        if (TryGetComponent(out Test_Player test_Player))
+        {
+            Debug.Log("Test_Player is attached !");
+        }
+        else
+        {
+            Debug.Log("Test_Player is not attached !");
+        }
     }
 
 }
